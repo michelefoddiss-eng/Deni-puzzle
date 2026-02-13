@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,27 +130,27 @@
     <div class="container" id="mainContainer">
         
         <div id="puzzleView">
-            <h1>Cara Deni...</h1>
+            <h1>Dear Deni...</h1>
             
             <div class="puzzle-wrap" id="puzzleWrap">
                 <div class="puzzle-grid" id="grid"></div>
                 <div class="full-img-overlay">
-                    <img src="full-image.PNG" alt="Noi">
+                    <img src="full-image.PNG" alt="Us">
                 </div>
             </div>
 
             <div class="hidden-content" id="revealText">
-                <p class="love-text">...mi completi.<br>Vuoi essere la mia Valentina?</p>
-                <button class="btn-yes" onclick="celebrate()">Sì! ❤️</button>
+                <p class="love-text">...you complete me.<br>Will you be my Valentine?</p>
+                <button class="btn-yes" onclick="celebrate()">Yes! ❤️</button>
             </div>
         </div>
 
         <div id="successView">
-            <h1>Evviva! ❤️</h1>
+            <h1>Yay! ❤️</h1>
             <div class="gif-container">
                 <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" alt="Celebration">
             </div>
-            <p style="font-size: 18px;">Non vedo l'ora!</p>
+            <p style="font-size: 18px;">I can't wait!</p>
         </div>
 
     </div>
@@ -162,7 +162,7 @@
         const EMPTY_POS = 2; // Angolo in alto a destra (pezzo 3)
         
         // Stato corrente e soluzione
-        let state = [0, 1, 2, 3, 4, 5, 6, 7, 8]; // 0=tile-1.PNG, 1=tile-2.PNG...
+        let state = [0, 1, 2, 3, 4, 5, 6, 7, 8]; 
         let solvedState = [0, 1, 2, 3, 4, 5, 6, 7, 8];
         
         // Mapping: il numero 0 corrisponde a tile-1.PNG, ecc.
@@ -223,7 +223,7 @@
                 if (tileNum === EMPTY_POS) {
                     div.classList.add('empty');
                 } else {
-                    // NOTA: Qui uso .PNG maiuscolo per coincidere con i tuoi file
+                    // QUI USO .PNG MAIUSCOLO
                     div.style.backgroundImage = `url('tile-${tileNum + 1}.PNG')`;
                     div.onclick = () => move(currentPos);
                 }
@@ -254,7 +254,7 @@
                     const emptyTile = document.querySelector('.tile.empty');
                     if(emptyTile) {
                         emptyTile.classList.remove('empty');
-                        // Anche qui .PNG maiuscolo
+                        // ANCHE QUI .PNG MAIUSCOLO
                         emptyTile.style.backgroundImage = `url('tile-${EMPTY_POS + 1}.PNG')`; 
                     }
                     
